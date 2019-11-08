@@ -1,0 +1,78 @@
+package gameoflife;
+
+import java.awt.*;
+
+public class Grid2 {
+	private MyGameBoard myGameBoard;
+	private int unitLength;
+	public static int DEFAULT_UNIT_LENGTH;
+	public static int left = 0; // left top is (0, 0)
+	public static int top = 0; // left top is (0, 0)
+
+	public Grid2(MyGameBoard myGameBoard, int unitLength) {
+		this.myGameBoard = myGameBoard;
+		this.unitLength = unitLength;
+	}
+	
+	public Grid2(MyGameBoard myGameBoard) {
+		this.myGameBoard = myGameBoard;
+		this.unitLength = DEFAULT_UNIT_LENGTH;
+	}
+	
+	
+	public int getUnitLength() {
+		return this.unitLength;
+	}
+	
+	public MyGameBoard getMyGameBoard() {
+		return this.myGameBoard;
+	}
+
+	public void drawLines(Graphics g) {
+		g.setColor(Color.GRAY);
+		MyGameBoard board = this.myGameBoard;
+		int columns = board.getNumberOfColumns();
+		int rows = board.getNumberOfRows();
+		int unitLength = this.getUnitLength();
+
+		int x1,x2, y1,y2;
+		x1 = x2 = unitLength;
+		y1 = 0;
+		y2 = rows*unitLength;
+		// draw vertical lines
+		while(x1 <= columns * unitLength) {
+			g.drawLine(x1, y1, x2, y2);
+			x1 += unitLength;
+			x2 += unitLength;
+		}
+
+		x1 = 0;
+		x2 = columns*unitLength;
+		y1 = y2 = unitLength;		
+		// draw horizontal lines
+		while(y1 <= rows * unitLength) {
+			g.drawLine(x1, y1, x2, y2);
+			y1 += unitLength;
+			y2 += unitLength;
+		}
+	}
+	
+
+	public void fillSqaures(Graphics g) {
+		g.setColor(Color.BLACK);
+		int width = this.myGameBoard.getNumberOfColumns();
+		int height = this.myGameBoard.getNumberOfRows();
+		int unitLength = this.unitLength;
+		for(int x=0; x<width; x++) {
+			for(int y=0; y<height; y++) {
+				if(!this.myGameBoard.onTheBoard(x, y)) {
+					continue;
+				}
+				if(this.myGameBoard.getBoard()[x][y]) {
+					g.fillRect(x*unitLength+1, y*unitLength+1, unitLength-1, unitLength-1);
+				}
+			}
+		}
+	}
+
+}
