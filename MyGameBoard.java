@@ -3,10 +3,6 @@ package gameoflife;
 import java.util.Random;
 
 public class MyGameBoard extends GameOfLifeBoard  {
-	public static int left = 0;
-	public static int right = 500;
-	public static int low = 0;
-	public static int high = 500;
 
 	public MyGameBoard(int columns, int rows){
 		super(columns, rows);
