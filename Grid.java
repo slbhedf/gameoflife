@@ -5,8 +5,8 @@ import java.awt.*;
 public class Grid {
 	private MyGameBoard myGameBoard;
 	private int unitLength;
-	private int left = 50; // left top is (0, 0) now
-	private int top = 50; // left top is (0, 0) now
+	private int left = 50; // left top is (50, 50) now
+	private int top = 50; // left top is (50, 50) now
 	public static int DEFAULT_UNIT_LENGTH;
 	
 	public Grid(MyGameBoard myGameBoard, int unitLength) {
