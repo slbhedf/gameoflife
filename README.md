@@ -18,9 +18,9 @@ https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 * ScreenClickListener.java 
 * StopButtonListener.java 
 * WindowCloseListener.java
-* MyTimer.java 	: inherites javax.swing.Timer
-		
-* TestGameOfLifesLogic.java: find out whether MyGameBoard really works
+* MyTimer.java 	: this timer makes the gameboard play automatically, after pressing auto play button 
+
+* TestGameOfLifesLogic.java: CUI test whether MyGameBoard really works
 
 * TestBlinker.java 	: graphical test
 * TestGlider.java 	: graphical test
