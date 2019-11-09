@@ -83,10 +83,10 @@ public class MyGameBoard extends GameOfLifeBoard  {
 	
 	// all cells become dead
 	public void clearBoard() {
-		int width = this.getNumberOfColumns();
-		int height = this.getNumberOfRows();
-		for(int i=0; i<width; i++) {
-			for(int j=0; j<height; j++) {
+		int columns = this.getNumberOfColumns();
+		int rows = this.getNumberOfRows();
+		for(int i=0; i<columns; i++) {
+			for(int j=0; j<rows; j++) {
 				this.turnToDead(i, j);
 			}
 		}
