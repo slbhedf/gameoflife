@@ -3,7 +3,7 @@
 Conway's Game of Life - Wikipedia
 https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 
-# files
+# Files
 * README.md 	: here
 * UserInterface.java : Runnable class
 * GameOfLifeBoard.java : abstract class of Game Board 
@@ -26,10 +26,8 @@ https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 * TestLargeX.java 	: graphical test
 * TestToad.java 	: graphical test
 	
-
+# Note
 1. if you click a squre, its color become changed, from black to white, or from white to black.
 white squares are dead cells, black squres are living cells.
 
 2. you can play auto play mode, if you press "auto play" button.
-
-
