@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class DrawingPanel extends JPanel{
 	/**
-	 * the game board and grid are drawn on the drawing panel 
+	 * the drawing panel where the grid are drawn  
 	 */
 	private static final long serialVersionUID = 1L;
 	private Grid grid;
